@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Apr  9 14:49:36 2021
-
 @author: ASIA-H607
 """
 
@@ -18,3 +17,4 @@ def swap(a,b): #函式
 m = int(input('輸入一個數')) #讓使用者輸入第一個數
 n = int(input('輸入一個數')) #讓使用者輸入第二個數
 swap(m,n) #套入函式
+
