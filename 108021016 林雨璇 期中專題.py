@@ -54,3 +54,12 @@ for n in range(0,4):
     
     print(random.choice(a),end='')
     
+answer = input('輸入答案') #讓使用者輸入猜的答案
+count = 0 #計算使用者猜的次數
+if answer == random.choice(a): #如果猜到答案
+    count+1 #次數加一
+    print('猜中了!猜了',count,'次') #輸出答對了，且輸出答了幾次
+elif answer != random.choice(a): #如果猜錯
+    
+    
+    
