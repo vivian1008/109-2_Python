@@ -13,20 +13,20 @@ while len(account) < 4:  #當註冊帳號的長度小於4
     account = input('帳號長度過短，請加長') #輸出長度過短，並且請使用者修改
 while len(password) < 6: #當註冊密碼的長度小於6   
     password = input('密碼長度過短，請加長') #輸出長度過短，並且請使用者修改
-for i in range('A','Z'+1): #for迴圈從A到Z
-    if i not in account: #如果帳號裡不包含A到Z
+for i in range(65,91): #for迴圈從A到Z
+    if chr(i) not in account: #如果帳號裡不包含A到Z
          account = input('帳號中未包含英文字母，請修改') #輸出未包含字母，請使用者修改
-for n in range('a','z'+1): #for迴圈從a到z
-    if n not in account: #如果帳號裡不包含a到z
+for n in range(97,123): #for迴圈從a到z
+    if chr(n) not in account: #如果帳號裡不包含a到z
          account = input('帳號中未包含英文字母，請修改') #輸出未包含字母，請使用者修改
 for j in range(0,10): #for迴圈從0到9
     if j not in account: #如果帳號裡不包含0到9
          account = input('帳號中未包含數字，請修改') #輸出未包含數字，請使用者修改
-for k in range('A','Z'+1): #for迴圈從A到Z
-    if k not in password: #如果密碼裡不包含A到Z
+for k in range(65,91): #for迴圈從A到Z
+    if chr(k) not in password: #如果密碼裡不包含A到Z
          password = input('密碼中未包含大寫字母，請修改') #輸出未包含大寫字母，請使用者修改
-for l in range('a','z'+1): #for迴圈從a到z
-    if l not in password: #如果密碼裡不包含a到z
+for l in range(97,123): #for迴圈從a到z
+    if chr(l) not in password: #如果密碼裡不包含a到z
          password = input('密碼中未包含小寫字母，請修改') #輸出未包含小寫字母，請使用者修改
 for m in range(0,10): #for迴圈從0到9
     if m not in password: #如果密碼裡不包含0到9
@@ -50,8 +50,7 @@ elif idd == account and pd == password: #如果帳號或密碼與註冊的相同
     print('登入成功!') #輸出登入成功
     a = [0,1,2,3,4,5,6,7,8,9] #list儲存數字0到9
     random.shuffle(a) #從a隨機挑數字
-for n in range(0,4): 
-    
+for n in range(0,4): #挑選4位數
     print(random.choice(a),end='')
     
 answer = input('輸入答案') #讓使用者輸入猜的答案
@@ -59,7 +58,8 @@ count = 0 #計算使用者猜的次數
 if answer == random.choice(a): #如果猜到答案
     count+1 #次數加一
     print('猜中了!猜了',count,'次') #輸出答對了，且輸出答了幾次
-elif answer != random.choice(a): #如果猜錯
+
+
     
     
     
